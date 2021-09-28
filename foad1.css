@@ -1,0 +1,106 @@
+body{
+    background-image: url(https://diapogram.com/upload/2019/04/11/20190411135302-b9fce877.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+header{
+    background-color: red;
+}
+ul{
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    /* ces 3 derniers, je les ai trouvé après quelques recherches car je voulais que mes éléments soient parfaitement centrés peu importe la taille de l'écran */
+    display: table; 
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+header nav ul li {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0px 10px 0px;
+}
+/* ici c'est ma première version avant les displays table et table-cell
+header nav ul li{
+    display: inline-block;
+    list-style: none;
+    
+    padding: 10px 20px 10px 20px;
+}*/    
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+.container{
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: white;
+    padding: 5px;
+}
+/* on pouvait aussi faire une position relative sur le container et une position absolue sur le paragraphe et jouer avec les marges pour positionner le texte correctement par rapport à l'image */
+.photo{
+    float: left;
+    border: solid 1px;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+hr{
+    clear: both;
+    border: solid 2px black;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.lorem{
+    font-size: 12px;
+    text-align: justify;
+    padding: 20px;
+    margin-bottom: 0;
+}
+footer{
+    background-color: red;
+    color: white;
+}
+.adresse{
+    font-size: 10px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+h6{
+    text-align: center;
+    font-style: italic;
+}
+.logomini{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%; /*50% fonctionne aussi, pas besoin de mettre 100%*/
+    background-color: white;
+    margin-right: 10px;
+}
+#logo{
+    width: 172px;
+    margin: auto;
+}
+@media screen and (min-device-width: 100px) and (max-device-width: 400px){
+    header nav ul, header nav ul li{
+        display: block;
+    }
+    header nav ul li{
+        border: solid 1px white;
+        border-radius: 10px;
+    }
+    .photo{
+        width: 100%;
+    }
+    .lorem{
+        padding: 0;
+    }
+}
